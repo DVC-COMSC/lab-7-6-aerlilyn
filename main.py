@@ -6,18 +6,18 @@ def getInput():
     ########################################
     """
 
-    #
-
-    user_input = input("Enter multiple values separated by commas: ")
+    while True:
+        try:
+            # Prompt the user to enter values
+            user_input = input("Enter multiple values separated by spaces: ")
             
-    values = user_input.split(',')
-    numbers = []
+            # Split the input by spaces and convert them to integers
+            values = list(map(int, user_input.split()))
             
-    for value in values:
-        num = int(value.strip())  
-        numbers.append(num)
-            
-    return numbers
+            return values
+        
+        except ValueError:
+            print("Invalid. Please try again:")
 
 
 def makeReverse(numbers):
