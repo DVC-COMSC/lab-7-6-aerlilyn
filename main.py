@@ -6,6 +6,8 @@ def getInput():
     ########################################
     """
 
+    #
+
     user_input = input("Enter multiple values separated by commas: ")
             
     values = user_input.split(',')
